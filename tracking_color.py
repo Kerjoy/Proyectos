@@ -5,27 +5,16 @@ import numpy as np
 import cv2
 import imutils
 import time
-<<<<<<< HEAD
 
 
 default = 32
 direction = ""
 
-=======
-# construct the argument parse and parse the arguments
-ap = argparse.ArgumentParser()
-ap.add_argument("-v", "--video",
-	help="path to the (optional) video file")
-ap.add_argument("-b", "--buffer", type=int, default=64,
-	help="max buffer size")
-args = vars(ap.parse_args())
->>>>>>> 28048b5265c6f578e4a9b4b367f73638b50faeb7
 # define the lower and upper boundaries of the "green"
 # ball in the HSV color space, then initialize the
 # list of tracked points
 greenLower = (29, 86, 6)
 greenUpper = (64, 255, 255)
-<<<<<<< HEAD
 
 # initialize the list of tracked points, the frame counter,
 # and the coordinate deltas
@@ -33,10 +22,6 @@ pts = deque(maxlen=default)
 counter = 0
 (dX, dY) = (0, 0)
 
-=======
-pts = deque(maxlen=args["buffer"])
-# if a video path was not supplied, grab the reference
->>>>>>> 28048b5265c6f578e4a9b4b367f73638b50faeb7
 # to the webcam
 vs = VideoStream(src=0).start()
 time.sleep(2.0)
