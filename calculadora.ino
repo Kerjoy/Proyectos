@@ -1,4 +1,3 @@
-
 #include <Keypad.h>
 #include <Wire.h> 
 #include <LiquidCrystal.h>
@@ -31,7 +30,7 @@ for(int i=0;i<=3;i++);
 lcd.setCursor(0,0);
   lcd.print("Calculadora 2020");
   lcd.setCursor(0,1);
-  lcd.print("hecho por :"); //aqui pon tu nombre
+  lcd.print("hecho por :"); //ROCIO VAZQUEZ
 delay(4000);
 lcd.clear();
 lcd.setCursor(0, 0);
