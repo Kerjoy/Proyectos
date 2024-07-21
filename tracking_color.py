@@ -10,9 +10,9 @@ import threading
 import serial
 
 
-serial_port = "COM3"
+serial_port = "COM4"
 baud_rate = 9600
-#ser = serial.Serial(serial_port, baud_rate, timeout=100)
+ser = serial.Serial(serial_port, baud_rate, timeout=100)
 
 def update_values():
     global greenLower, greenUpper
@@ -80,7 +80,12 @@ def video_thread():
                 # draw the circle and centroid on the frame, then update the list of tracked points
                 cv2.circle(frame, (int(x), int(y)), int(radius), (0, 255, 255), 2)
                 cv2.circle(frame, center, 5, (0, 0, 255), -1)
-                print(center[0])
+                #pos = center[0]
+                #pos = int(pos)
+                #pos = (pos + 1)/3.3
+                #print(int(pos))
+                #ser.write(str(int(pos)) + ",")
+                #ser.write(",") #need investigation, i down why but i think not work for codec, i need info why dont working
         # update the points queue
         pts.appendleft(center)
         # loop over the set of tracked points
